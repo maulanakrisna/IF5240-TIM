@@ -2,6 +2,8 @@
 Dashboard interaktif berbasis Streamlit untuk mendukung pengambilan keputusan investasi pada infrastruktur listrik.
 Membantu manajer dan tim operasional mengidentifikasi prioritas investasi berdasarkan pola gangguan (faults), kondisi lingkungan, kesehatan komponen, dan downtime.
 
+sumber data: https://www.kaggle.com/datasets/ziya07/power-system-faults-dataset?resource=download
+
 🚀 Fitur Utama
 
 ✅ Ringkasan KPI:

@@ -4,6 +4,11 @@ import plotly.express as px
 
 df = pd.read_csv("fault_data.csv")
 
+# Pisahkan kolom lokasi menjadi Latitude & Longitude
+df[["Latitude", "Longitude"]] = df["Fault Location (Latitude, Longitude)"].str.strip("()").str.split(",", expand=True)
+df["Latitude"] = df["Latitude"].astype(float)
+df["Longitude"] = df["Longitude"].astype(float)
+
 st.set_page_config(page_title="Investment Decision Dashboard", layout="wide")
 st.title("📊 Investment Decision Support Dashboard")
 

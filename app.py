@@ -55,8 +55,8 @@ fig_map = px.scatter_mapbox(
     hover_data=["Fault Type", "Down time (hrs)"],
     color="Fault Type",
     size="Down time (hrs)",
-    zoom=12,
-    height=400
+    zoom=10,
+    height=500
 )
 fig_map.update_layout(mapbox_style="open-street-map")
 fig_map.update_layout(margin={"r":0,"t":0,"l":0,"b":0})

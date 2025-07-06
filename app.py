@@ -2,25 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# Data
-data = {
-    "Fault ID": ["F001", "F002", "F003", "F004", "F005", "F006"],
-    "Fault Type": ["Line Breakage", "Transformer Failure", "Overheating", "Line Breakage", "Transformer Failure", "Overheating"],
-    "Latitude": [34.0522, 34.056, 34.0525, 34.055, 34.0545, 34.05],
-    "Longitude": [-118.2437, -118.245, -118.244, -118.242, -118.243, -118.24],
-    "Voltage (V)": [2200, 1800, 2100, 2050, 1900, 2150],
-    "Current (A)": [250, 180, 230, 240, 190, 220],
-    "Power Load (MW)": [50, 45, 55, 48, 50, 52],
-    "Temperature (°C)": [25, 28, 35, 23, 30, 32],
-    "Wind Speed (km/h)": [20, 15, 25, 10, 18, 22],
-    "Weather Condition": ["Clear", "Rainy", "Windstorm", "Clear", "Snowy", "Thunderstorm"],
-    "Maintenance Status": ["Scheduled", "Completed", "Pending", "Completed", "Scheduled", "Pending"],
-    "Component Health": ["Normal", "Faulty", "Overheated", "Normal", "Faulty", "Overheated"],
-    "Duration of Fault (hrs)": [2.0, 3.0, 4.0, 2.5, 3.5, 5.0],
-    "Down time (hrs)": [1.0, 5.0, 6.0, 3.0, 4.0, 7.0]
-}
-
-df = pd.DataFrame(data)
+df = pd.read_csv("fault_data.csv")
 
 st.set_page_config(page_title="Investment Decision Dashboard", layout="wide")
 st.title("📊 Investment Decision Support Dashboard")
